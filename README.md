@@ -1,9 +1,12 @@
 
 
-```
+
 # 141024Schule Projekt
 
 Dieses Projekt verwaltet eine Einkaufsliste, die sowohl Lebensmittel als auch Elektronikprodukte enthalten kann. Es enthält sowohl die Implementierung der Einkaufsliste als auch Tests basierend auf Google Test (GTest).
+
+![image](https://github.com/user-attachments/assets/b0710706-b13c-48dd-bd1c-b6807cbed648)
+
 
 ## Projektstruktur
 
@@ -55,9 +58,12 @@ Nach der erfolgreichen Konfiguration der Präprozessor-Direktiven kannst du die 
 
 Wenn alles richtig konfiguriert ist, sollten die Tests wie folgt erscheinen:
 
-```
+
 Testlauf abgeschlossen: 3 Tests (3 erfolgreich, 0 fehlerhaft, 0 übersprungen)
-```
+
+![image](https://github.com/user-attachments/assets/5c70ed22-0691-4154-b7a1-9624d5144aa6)
+
+
 
 ## Verwendung des Programms
 
