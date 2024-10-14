@@ -1,0 +1,139 @@
+\doxysection{Lebensmittel Klassenreferenz}
+\hypertarget{class_lebensmittel}{}\label{class_lebensmittel}\index{Lebensmittel@{Lebensmittel}}
+
+
+Eine Klasse, die ein \doxylink{class_lebensmittel}{Lebensmittel} repräsentiert.  
+
+
+
+
+{\ttfamily \#include $<$lebensmittel.\+hpp$>$}
+
+Klassendiagramm für Lebensmittel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_lebensmittel}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lebensmittel_a2391ca6cdb50e0de62c513ea43a51cc0}{Lebensmittel}} (const std\+::string \&name, const std\+::string \&haltbarkeitsdatum, double gewicht)
+\begin{DoxyCompactList}\small\item\em Konstruktor für \doxylink{class_lebensmittel}{Lebensmittel}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lebensmittel_a42dcdce0ca19a3e49bd1be047431fde4}{anzeigen}} () const override
+\begin{DoxyCompactList}\small\item\em Zeigt die Details des Lebensmittels an. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_lebensmittel_ab8ce66f3de72e18348eead4c4408eba1}{operator==}} (const \mbox{\hyperlink{class_lebensmittel}{Lebensmittel}} \&anderes) const
+\begin{DoxyCompactList}\small\item\em Überladung des Vergleichsoperators == für \doxylink{class_lebensmittel}{Lebensmittel}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Öffentliche Methoden geerbt von \mbox{\hyperlink{class_produkt}{Produkt}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_produkt_a893d90bbe130252c16f44232b0421942}{\texorpdfstring{$\sim$}{\string~}\+Produkt}} ()
+\begin{DoxyCompactList}\small\item\em Virtueller Destruktor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Ausführliche Beschreibung}
+Eine Klasse, die ein \doxylink{class_lebensmittel}{Lebensmittel} repräsentiert. 
+
+Die Klasse enthält Informationen über den Namen, das Haltbarkeitsdatum und das Gewicht eines Lebensmittels. 
+
+Definiert in Zeile \mbox{\hyperlink{lebensmittel_8hpp_source_l00012}{12}} der Datei \mbox{\hyperlink{lebensmittel_8hpp_source}{lebensmittel.\+hpp}}.
+
+
+
+\doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
+\Hypertarget{class_lebensmittel_a2391ca6cdb50e0de62c513ea43a51cc0}\index{Lebensmittel@{Lebensmittel}!Lebensmittel@{Lebensmittel}}
+\index{Lebensmittel@{Lebensmittel}!Lebensmittel@{Lebensmittel}}
+\doxysubsubsection{\texorpdfstring{Lebensmittel()}{Lebensmittel()}}
+{\footnotesize\ttfamily \label{class_lebensmittel_a2391ca6cdb50e0de62c513ea43a51cc0} 
+Lebensmittel\+::\+Lebensmittel (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{const std\+::string \&}]{haltbarkeitsdatum}{, }\item[{double}]{gewicht}{}\end{DoxyParamCaption})}
+
+
+
+Konstruktor für \doxylink{class_lebensmittel}{Lebensmittel}. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em name} & Der Name des Lebensmittels. \\
+\hline
+{\em haltbarkeitsdatum} & Das Haltbarkeitsdatum des Lebensmittels. \\
+\hline
+{\em gewicht} & Das Gewicht des Lebensmittels in Kilogramm. \\
+\hline
+\end{DoxyParams}
+
+
+Definiert in Zeile \mbox{\hyperlink{lebensmittel_8cpp_source_l00011}{11}} der Datei \mbox{\hyperlink{lebensmittel_8cpp_source}{lebensmittel.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \ \ \ \ :\ name(name),\ haltbarkeitsdatum(haltbarkeitsdatum),\ gewicht(gewicht)\ \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Dokumentation der Elementfunktionen}
+\Hypertarget{class_lebensmittel_a42dcdce0ca19a3e49bd1be047431fde4}\index{Lebensmittel@{Lebensmittel}!anzeigen@{anzeigen}}
+\index{anzeigen@{anzeigen}!Lebensmittel@{Lebensmittel}}
+\doxysubsubsection{\texorpdfstring{anzeigen()}{anzeigen()}}
+{\footnotesize\ttfamily \label{class_lebensmittel_a42dcdce0ca19a3e49bd1be047431fde4} 
+void Lebensmittel\+::anzeigen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Zeigt die Details des Lebensmittels an. 
+
+Diese Methode gibt den Namen, das Haltbarkeitsdatum und das Gewicht des Lebensmittels aus.
+
+Gibt den Namen, das Haltbarkeitsdatum und das Gewicht des Lebensmittels auf der Konsole aus. 
+
+Implementiert \mbox{\hyperlink{class_produkt_a89928db5d91a416f3b92b58631df5dc7}{Produkt}}.
+
+
+
+Definiert in Zeile \mbox{\hyperlink{lebensmittel_8cpp_source_l00020}{20}} der Datei \mbox{\hyperlink{lebensmittel_8cpp_source}{lebensmittel.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Lebensmittel:\ "{}}\ <<\ name\ <<\ \textcolor{stringliteral}{"{},\ Haltbarkeitsdatum:\ "{}}\ <<\ haltbarkeitsdatum}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{},\ Gewicht:\ "{}}\ <<\ gewicht\ <<\ \textcolor{stringliteral}{"{}\ kg"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00023\ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_lebensmittel_ab8ce66f3de72e18348eead4c4408eba1}\index{Lebensmittel@{Lebensmittel}!operator==@{operator==}}
+\index{operator==@{operator==}!Lebensmittel@{Lebensmittel}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{class_lebensmittel_ab8ce66f3de72e18348eead4c4408eba1} 
+bool Lebensmittel\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_lebensmittel}{Lebensmittel}} \&}]{anderes}{}\end{DoxyParamCaption}) const}
+
+
+
+Überladung des Vergleichsoperators == für \doxylink{class_lebensmittel}{Lebensmittel}. 
+
+Vergleicht zwei Lebensmittel-\/\+Objekte anhand ihres Namens, Haltbarkeitsdatums und Gewichts.
+
+
+\begin{DoxyParams}{Parameter}
+{\em anderes} & Das andere Lebensmittel-\/\+Objekt zum Vergleich. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+true, wenn alle Attribute übereinstimmen, false sonst. 
+\end{DoxyReturn}
+
+
+Definiert in Zeile \mbox{\hyperlink{lebensmittel_8cpp_source_l00033}{33}} der Datei \mbox{\hyperlink{lebensmittel_8cpp_source}{lebensmittel.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordflow}{return}\ (name\ ==\ anderes.name\ \&\&\ haltbarkeitsdatum\ ==\ anderes.haltbarkeitsdatum\ \&\&\ gewicht\ ==\ anderes.gewicht);}
+\DoxyCodeLine{00035\ \}}
+
+\end{DoxyCode}
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+141024\+Schule/\mbox{\hyperlink{lebensmittel_8hpp}{lebensmittel.\+hpp}}\item 
+141024\+Schule/\mbox{\hyperlink{lebensmittel_8cpp}{lebensmittel.\+cpp}}\end{DoxyCompactItemize}

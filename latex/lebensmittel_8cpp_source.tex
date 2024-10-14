@@ -1,0 +1,20 @@
+\doxysection{lebensmittel.\+cpp}
+\hypertarget{lebensmittel_8cpp_source}{}\label{lebensmittel_8cpp_source}\index{141024Schule/lebensmittel.cpp@{141024Schule/lebensmittel.cpp}}
+\mbox{\hyperlink{lebensmittel_8cpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{lebensmittel_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{lebensmittel_8hpp}{lebensmittel.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{lebensmittel_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{lebensmittel_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{lebensmittel_8cpp_source_l00011}\mbox{\hyperlink{class_lebensmittel_a2391ca6cdb50e0de62c513ea43a51cc0}{00011}}\ \mbox{\hyperlink{class_lebensmittel_a2391ca6cdb50e0de62c513ea43a51cc0}{Lebensmittel::Lebensmittel}}(\textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keyword}{const}\ std::string\&\ haltbarkeitsdatum,\ \textcolor{keywordtype}{double}\ gewicht)}
+\DoxyCodeLine{\Hypertarget{lebensmittel_8cpp_source_l00012}00012\ \ \ \ \ :\ name(name),\ haltbarkeitsdatum(haltbarkeitsdatum),\ gewicht(gewicht)\ \{\}}
+\DoxyCodeLine{\Hypertarget{lebensmittel_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{lebensmittel_8cpp_source_l00020}\mbox{\hyperlink{class_lebensmittel_a42dcdce0ca19a3e49bd1be047431fde4}{00020}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lebensmittel_a42dcdce0ca19a3e49bd1be047431fde4}{Lebensmittel::anzeigen}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{lebensmittel_8cpp_source_l00021}00021\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Lebensmittel:\ "{}}\ <<\ name\ <<\ \textcolor{stringliteral}{"{},\ Haltbarkeitsdatum:\ "{}}\ <<\ haltbarkeitsdatum}
+\DoxyCodeLine{\Hypertarget{lebensmittel_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{},\ Gewicht:\ "{}}\ <<\ gewicht\ <<\ \textcolor{stringliteral}{"{}\ kg"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{lebensmittel_8cpp_source_l00023}00023\ \}}
+\DoxyCodeLine{\Hypertarget{lebensmittel_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{lebensmittel_8cpp_source_l00033}\mbox{\hyperlink{class_lebensmittel_ab8ce66f3de72e18348eead4c4408eba1}{00033}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_lebensmittel_ab8ce66f3de72e18348eead4c4408eba1}{Lebensmittel::operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_lebensmittel}{Lebensmittel}}\&\ anderes)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{lebensmittel_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{return}\ (name\ ==\ anderes.name\ \&\&\ haltbarkeitsdatum\ ==\ anderes.haltbarkeitsdatum\ \&\&\ gewicht\ ==\ anderes.gewicht);}
+\DoxyCodeLine{\Hypertarget{lebensmittel_8cpp_source_l00035}00035\ \}}
+
+\end{DoxyCode}

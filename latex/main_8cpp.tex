@@ -1,0 +1,69 @@
+\doxysection{141024Schule/main.cpp-\/\+Dateireferenz}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{141024Schule/main.cpp@{141024Schule/main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include "{}lebensmittel.\+hpp"{}}\newline
+{\ttfamily \#include "{}elektronik.\+hpp"{}}\newline
+{\ttfamily \#include "{}einkaufsliste.\+hpp"{}}\newline
+\doxysubsubsection*{Funktionen}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Hauptfunktion des Programms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentation der Funktionen}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Hauptfunktion des Programms. 
+
+Diese Funktion erstellt eine \doxylink{class_einkaufsliste}{Einkaufsliste}, fügt Produkte hinzu, zeigt die Liste an, entfernt ein \doxylink{class_produkt}{Produkt} und zeigt die Liste erneut an.
+
+\begin{DoxyReturn}{Rückgabe}
+0 bei erfolgreicher Ausführung. 
+\end{DoxyReturn}
+
+
+Definiert in Zeile \mbox{\hyperlink{main_8cpp_source_l00016}{16}} der Datei \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_einkaufsliste}{Einkaufsliste<Produkt*>}}\ einkaufsliste;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ Erstellen\ von\ Produkten}}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_lebensmittel}{Lebensmittel}}*\ apfel\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_lebensmittel}{Lebensmittel}}(\textcolor{stringliteral}{"{}Apfel"{}},\ \textcolor{stringliteral}{"{}2023-\/12-\/31"{}},\ 0.2);}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_lebensmittel}{Lebensmittel}}*\ banane\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_lebensmittel}{Lebensmittel}}(\textcolor{stringliteral}{"{}Banane"{}},\ \textcolor{stringliteral}{"{}2023-\/11-\/30"{}},\ 0.3);}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_elektronik}{Elektronik}}*\ laptop\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_elektronik}{Elektronik}}(\textcolor{stringliteral}{"{}Laptop"{}},\ \textcolor{stringliteral}{"{}2\ Jahre"{}},\ 999.99);}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_elektronik}{Elektronik}}*\ smartphone\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_elektronik}{Elektronik}}(\textcolor{stringliteral}{"{}Smartphone"{}},\ \textcolor{stringliteral}{"{}1\ Jahr"{}},\ 499.99);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ Produkte\ zur\ Einkaufsliste\ hinzufügen}}
+\DoxyCodeLine{00026\ \ \ \ \ einkaufsliste.\mbox{\hyperlink{class_einkaufsliste_a2f2be3ffb44ee9a8eb54bea0d6150580}{hinzufuegen}}(apfel);}
+\DoxyCodeLine{00027\ \ \ \ \ einkaufsliste.\mbox{\hyperlink{class_einkaufsliste_a2f2be3ffb44ee9a8eb54bea0d6150580}{hinzufuegen}}(banane);}
+\DoxyCodeLine{00028\ \ \ \ \ einkaufsliste.\mbox{\hyperlink{class_einkaufsliste_a2f2be3ffb44ee9a8eb54bea0d6150580}{hinzufuegen}}(laptop);}
+\DoxyCodeLine{00029\ \ \ \ \ einkaufsliste.\mbox{\hyperlink{class_einkaufsliste_a2f2be3ffb44ee9a8eb54bea0d6150580}{hinzufuegen}}(smartphone);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ Einkaufsliste\ anzeigen}}
+\DoxyCodeLine{00032\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Einkaufsliste:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00033\ \ \ \ \ einkaufsliste.\mbox{\hyperlink{class_einkaufsliste_a59a1102998ab6c99356921ddbb235065}{anzeigen}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Ein\ Produkt\ entfernen\ und\ erneut\ anzeigen}}
+\DoxyCodeLine{00036\ \ \ \ \ einkaufsliste.\mbox{\hyperlink{class_einkaufsliste_aca892ba0af59ef022a1b96bf6ce163f2}{entfernen}}(banane);}
+\DoxyCodeLine{00037\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nEinkaufsliste\ nach\ Entfernen\ der\ Banane:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00038\ \ \ \ \ einkaufsliste.\mbox{\hyperlink{class_einkaufsliste_a59a1102998ab6c99356921ddbb235065}{anzeigen}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ Speicher\ freigeben}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{delete}\ apfel;}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{delete}\ banane;}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{delete}\ laptop;}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{delete}\ smartphone;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00047\ \}}
+
+\end{DoxyCode}

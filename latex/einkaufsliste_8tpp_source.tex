@@ -1,0 +1,61 @@
+\doxysection{einkaufsliste.\+tpp}
+\hypertarget{einkaufsliste_8tpp_source}{}\label{einkaufsliste_8tpp_source}\index{141024Schule/einkaufsliste.tpp@{141024Schule/einkaufsliste.tpp}}
+\mbox{\hyperlink{einkaufsliste_8tpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00001}00001\ \#pragma\ once}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00003}00003\ \#include\ "{}einkaufsliste.hpp"{}}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00004}00004\ \#include\ <iostream>}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00005}00005\ \#include\ <type\_traits>}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00007}00007\ //\ Überprüfen,\ ob\ eine\ Klasse\ die\ Methode\ anzeigen()\ besitzt}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00008}00008\ template\ <typename\ T>}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00009}00009\ using\ hat\_anzeigen\_t\ =\ decltype(std::declval<T>().anzeigen());}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00011}00011\ template\ <typename\ T,\ typename\ =\ void>}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00012}00012\ constexpr\ bool\ hat\_anzeigen\_v\ =\ false;}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00014}00014\ template\ <typename\ T>}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00015}00015\ constexpr\ bool\ hat\_anzeigen\_v<T,\ std::void\_t<hat\_anzeigen\_t<T>>>\ =\ true;}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00017}00017\ //\ Implementierung\ der\ Methoden\ der\ Einkaufsliste}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00019}00019\ //\ Hinzufügen\ eines\ Produkts\ zur\ Einkaufsliste}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00020}00020\ template\ <typename\ T>}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00021}00021\ void\ Einkaufsliste<T>::hinzufuegen(const\ T\&\ produkt)\ \{}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00022}00022\ \ \ \ \ produkte.push\_back(produkt);}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00023}00023\ \}}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00025}00025\ //\ Entfernen\ eines\ Produkts\ aus\ der\ Einkaufsliste}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00026}00026\ template\ <typename\ T>}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00027}00027\ void\ Einkaufsliste<T>::entfernen(const\ T\&\ produkt)\ \{}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00028}00028\ \ \ \ \ auto\ it\ =\ std::find(produkte.begin(),\ produkte.end(),\ produkt);}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00029}00029\ \ \ \ \ if\ (it\ !=\ produkte.end())\ \{}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00030}00030\ \ \ \ \ \ \ \ \ produkte.erase(it);}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00032}00032\ \}}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00034}00034\ //\ Anzeigen\ der\ Einkaufsliste}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00035}00035\ template\ <typename\ T>}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00036}00036\ void\ Einkaufsliste<T>::anzeigen()\ const\ \{}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00037}00037\ \ \ \ \ if\ (produkte.empty())\ \{}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00038}00038\ \ \ \ \ \ \ \ \ std::cout\ <<\ "{}Die\ Einkaufsliste\ ist\ leer."{}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00039}00039\ \ \ \ \ \}\ else\ \{}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00040}00040\ \ \ \ \ \ \ \ \ std::cout\ <<\ "{}Produkte\ in\ der\ Einkaufsliste:"{}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00041}00041\ \ \ \ \ \ \ \ \ for\ (const\ auto\&\ produkt\ :\ produkte)\ \{}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ if\ constexpr\ (hat\_anzeigen\_v<std::remove\_pointer\_t<T>>)\ \{}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ Wenn\ das\ Produkt\ ein\ Zeiger\ ist,\ dereferenzieren}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if\ constexpr\ (std::is\_pointer\_v<T>)\ \{}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ produkt-\/>anzeigen();}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ else\ \{}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ produkt.anzeigen();}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ else\ \{}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ Fallback\ für\ Produkte\ ohne\ anzeigen()-\/Methode}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ produkt\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00054}00054\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{einkaufsliste_8tpp_source_l00055}00055\ \}}
+
+\end{DoxyCode}

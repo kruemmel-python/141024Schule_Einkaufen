@@ -1,0 +1,91 @@
+\doxysection{Einkaufsliste\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Template-\/\+Klassenreferenz}
+\hypertarget{class_einkaufsliste}{}\label{class_einkaufsliste}\index{Einkaufsliste$<$ T $>$@{Einkaufsliste$<$ T $>$}}
+
+
+Eine Klasse, um eine \doxylink{class_einkaufsliste}{Einkaufsliste} zu verwalten.  
+
+
+
+
+{\ttfamily \#include $<$einkaufsliste.\+hpp$>$}
+
+\doxysubsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_einkaufsliste_a2f2be3ffb44ee9a8eb54bea0d6150580}{hinzufuegen}} (const T \&produkt)
+\begin{DoxyCompactList}\small\item\em Fügt ein \doxylink{class_produkt}{Produkt} zur \doxylink{class_einkaufsliste}{Einkaufsliste} hinzu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_einkaufsliste_aca892ba0af59ef022a1b96bf6ce163f2}{entfernen}} (const T \&produkt)
+\begin{DoxyCompactList}\small\item\em Entfernt ein \doxylink{class_produkt}{Produkt} aus der \doxylink{class_einkaufsliste}{Einkaufsliste}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_einkaufsliste_a59a1102998ab6c99356921ddbb235065}{anzeigen}} () const
+\begin{DoxyCompactList}\small\item\em Zeigt die \doxylink{class_einkaufsliste}{Einkaufsliste} an. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Ausführliche Beschreibung}
+\subsubsection*{template$<$typename T$>$\newline
+class Einkaufsliste$<$ T $>$}
+Eine Klasse, um eine \doxylink{class_einkaufsliste}{Einkaufsliste} zu verwalten. 
+
+Die \doxylink{class_einkaufsliste}{Einkaufsliste} speichert Produkte und bietet Funktionen, um Produkte hinzuzufügen, zu entfernen und die Liste anzuzeigen.
+
+
+\begin{DoxyTemplParams}{Template-\/\+Parameter}
+{\em T} & Der Typ des Produkts, das in der Liste gespeichert wird. \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definiert in Zeile \mbox{\hyperlink{einkaufsliste_8hpp_source_l00015}{15}} der Datei \mbox{\hyperlink{einkaufsliste_8hpp_source}{einkaufsliste.\+hpp}}.
+
+
+
+\doxysubsection{Dokumentation der Elementfunktionen}
+\Hypertarget{class_einkaufsliste_a59a1102998ab6c99356921ddbb235065}\index{Einkaufsliste$<$ T $>$@{Einkaufsliste$<$ T $>$}!anzeigen@{anzeigen}}
+\index{anzeigen@{anzeigen}!Einkaufsliste$<$ T $>$@{Einkaufsliste$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{anzeigen()}{anzeigen()}}
+{\footnotesize\ttfamily \label{class_einkaufsliste_a59a1102998ab6c99356921ddbb235065} 
+template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_einkaufsliste}{Einkaufsliste}}$<$ T $>$\+::anzeigen (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Zeigt die \doxylink{class_einkaufsliste}{Einkaufsliste} an. 
+
+Diese Funktion ruft die {\ttfamily \doxylink{class_einkaufsliste_a59a1102998ab6c99356921ddbb235065}{anzeigen()}}-\/Methode jedes Produkts in der Liste auf. \Hypertarget{class_einkaufsliste_aca892ba0af59ef022a1b96bf6ce163f2}\index{Einkaufsliste$<$ T $>$@{Einkaufsliste$<$ T $>$}!entfernen@{entfernen}}
+\index{entfernen@{entfernen}!Einkaufsliste$<$ T $>$@{Einkaufsliste$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{entfernen()}{entfernen()}}
+{\footnotesize\ttfamily \label{class_einkaufsliste_aca892ba0af59ef022a1b96bf6ce163f2} 
+template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_einkaufsliste}{Einkaufsliste}}$<$ T $>$\+::entfernen (\begin{DoxyParamCaption}\item[{const T \&}]{produkt}{}\end{DoxyParamCaption})}
+
+
+
+Entfernt ein \doxylink{class_produkt}{Produkt} aus der \doxylink{class_einkaufsliste}{Einkaufsliste}. 
+
+Falls das \doxylink{class_produkt}{Produkt} mehrfach vorhanden ist, wird nur die erste Instanz entfernt.
+
+
+\begin{DoxyParams}{Parameter}
+{\em produkt} & Das \doxylink{class_produkt}{Produkt}, das entfernt werden soll. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_einkaufsliste_a2f2be3ffb44ee9a8eb54bea0d6150580}\index{Einkaufsliste$<$ T $>$@{Einkaufsliste$<$ T $>$}!hinzufuegen@{hinzufuegen}}
+\index{hinzufuegen@{hinzufuegen}!Einkaufsliste$<$ T $>$@{Einkaufsliste$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{hinzufuegen()}{hinzufuegen()}}
+{\footnotesize\ttfamily \label{class_einkaufsliste_a2f2be3ffb44ee9a8eb54bea0d6150580} 
+template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_einkaufsliste}{Einkaufsliste}}$<$ T $>$\+::hinzufuegen (\begin{DoxyParamCaption}\item[{const T \&}]{produkt}{}\end{DoxyParamCaption})}
+
+
+
+Fügt ein \doxylink{class_produkt}{Produkt} zur \doxylink{class_einkaufsliste}{Einkaufsliste} hinzu. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em produkt} & Das \doxylink{class_produkt}{Produkt}, das hinzugefügt werden soll. \\
+\hline
+\end{DoxyParams}
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+141024\+Schule/\mbox{\hyperlink{einkaufsliste_8hpp}{einkaufsliste.\+hpp}}\end{DoxyCompactItemize}

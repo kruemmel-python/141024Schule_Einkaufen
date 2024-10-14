@@ -1,0 +1,47 @@
+\doxysection{main.\+cpp}
+\hypertarget{main_8cpp_source}{}\label{main_8cpp_source}\index{141024Schule/main.cpp@{141024Schule/main.cpp}}
+\mbox{\hyperlink{main_8cpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ RUN\_TESTS}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{lebensmittel_8hpp}{lebensmittel.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{elektronik_8hpp}{elektronik.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{einkaufsliste_8hpp}{einkaufsliste.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00016}\mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00016}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00017}00017\ \ \ \ \ \mbox{\hyperlink{class_einkaufsliste}{Einkaufsliste<Produkt*>}}\ einkaufsliste;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{comment}{//\ Erstellen\ von\ Produkten}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00020}00020\ \ \ \ \ \mbox{\hyperlink{class_lebensmittel}{Lebensmittel}}*\ apfel\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_lebensmittel}{Lebensmittel}}(\textcolor{stringliteral}{"{}Apfel"{}},\ \textcolor{stringliteral}{"{}2023-\/12-\/31"{}},\ 0.2);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{class_lebensmittel}{Lebensmittel}}*\ banane\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_lebensmittel}{Lebensmittel}}(\textcolor{stringliteral}{"{}Banane"{}},\ \textcolor{stringliteral}{"{}2023-\/11-\/30"{}},\ 0.3);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{class_elektronik}{Elektronik}}*\ laptop\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_elektronik}{Elektronik}}(\textcolor{stringliteral}{"{}Laptop"{}},\ \textcolor{stringliteral}{"{}2\ Jahre"{}},\ 999.99);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{class_elektronik}{Elektronik}}*\ smartphone\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_elektronik}{Elektronik}}(\textcolor{stringliteral}{"{}Smartphone"{}},\ \textcolor{stringliteral}{"{}1\ Jahr"{}},\ 499.99);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{comment}{//\ Produkte\ zur\ Einkaufsliste\ hinzufügen}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00026}00026\ \ \ \ \ einkaufsliste.\mbox{\hyperlink{class_einkaufsliste_a2f2be3ffb44ee9a8eb54bea0d6150580}{hinzufuegen}}(apfel);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00027}00027\ \ \ \ \ einkaufsliste.\mbox{\hyperlink{class_einkaufsliste_a2f2be3ffb44ee9a8eb54bea0d6150580}{hinzufuegen}}(banane);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00028}00028\ \ \ \ \ einkaufsliste.\mbox{\hyperlink{class_einkaufsliste_a2f2be3ffb44ee9a8eb54bea0d6150580}{hinzufuegen}}(laptop);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00029}00029\ \ \ \ \ einkaufsliste.\mbox{\hyperlink{class_einkaufsliste_a2f2be3ffb44ee9a8eb54bea0d6150580}{hinzufuegen}}(smartphone);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{comment}{//\ Einkaufsliste\ anzeigen}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00032}00032\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Einkaufsliste:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00033}00033\ \ \ \ \ einkaufsliste.\mbox{\hyperlink{class_einkaufsliste_a59a1102998ab6c99356921ddbb235065}{anzeigen}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{comment}{//\ Ein\ Produkt\ entfernen\ und\ erneut\ anzeigen}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00036}00036\ \ \ \ \ einkaufsliste.\mbox{\hyperlink{class_einkaufsliste_aca892ba0af59ef022a1b96bf6ce163f2}{entfernen}}(banane);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00037}00037\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nEinkaufsliste\ nach\ Entfernen\ der\ Banane:"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00038}00038\ \ \ \ \ einkaufsliste.\mbox{\hyperlink{class_einkaufsliste_a59a1102998ab6c99356921ddbb235065}{anzeigen}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{comment}{//\ Speicher\ freigeben}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keyword}{delete}\ apfel;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{keyword}{delete}\ banane;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00043}00043\ \ \ \ \ \textcolor{keyword}{delete}\ laptop;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{keyword}{delete}\ smartphone;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00047}00047\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00049}00049\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ RUN\_TESTS}}
+
+\end{DoxyCode}
